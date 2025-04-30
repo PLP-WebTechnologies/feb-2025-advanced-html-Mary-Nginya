@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Travel Dreams in HTML5 Elements and Forms</title>
+</head>
+<body>
+
+    <!-- Top 5 Dream Destinations -->
+    <h2>Top 5 Places I Want to Visit</h2>
+    <ol type="I">
+        <li>Australia</li>
+        <li>Singapore</li>
+        <li>Japan</li>
+        <li>Greece</li>
+        <li>Morocco</li>
+    </ol>
+
+    <!-- External Image from Pexels -->
+    <h2>Inspiration from Pexels</h2>
+    <img src="https://images.pexels.com/photos/2193300/pexels-photo-2193300.jpeg" alt="Travel Inspiration" width="500">
+
+    <!-- Table: Travel Plans with Pseudonyms -->
+    <h2>My Travel Plans</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Pseudonym</th>
+                <th>Location</th>
+                <th>Planned Date</th>
+                <th>Mobile</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>LunaLights</td><td>Australia</td><td>2025-12-10</td><td>0711111111</td><td>luna@travelmail.com</td></tr>
+            <tr><td>MusedMuse</td><td>Singapore</td><td>2026-02-05</td><td>0722222222</td><td>muse@tripmail.com</td></tr>
+            <tr><td>NovaPower</td><td>Japan</td><td>2026-04-20</td><td>0733333333</td><td>nova@wander.com</td></tr>
+            <tr><td>BloomTech</td><td>Greece</td><td>2026-07-15</td><td>0744444444</td><td>bloom@journey.org</td></tr>
+            <tr><td>ChobiRay</td><td>Morocco</td><td>2026-09-30</td><td>0755555555</td><td>ray@globe.net</td></tr>
+        </tbody>
+    </table>
+
+    <!-- Registration Form -->
+    <h2>Subscribe to My Travel Diary</h2>
+    <form action="#" method="post">
+        <!-- Name -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required><br><br>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6"><br><br>
+
+        <!-- Date -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <!-- Gender -->
+        <p>Gender:</p>
+        <label><input type="radio" name="gender" value="female" required> Female</label>
+        <label><input type="radio" name="gender" value="male"> Male</label><br><br>
+
+        <!-- Hobbies -->
+        <p>What are your travel interests?</p>
+        <label><input type="checkbox" name="interest" value="adventure"> Adventure</label>
+        <label><input type="checkbox" name="interest" value="culture"> Culture</label>
+        <label><input type="checkbox" name="interest" value="nature"> Nature</label><br><br>
+
+        <!-- Country Dropdown -->
+        <label for="country">Where are you from?</label>
+        <select id="country" name="country" required>
+            <option value="">--Select--</option>
+            <option value="kenya">Kenya</option>
+            <option value="rwanda">Rwanda</option>
+            <option value="nigeria">Nigeria</option>
+        </select><br><br>
+
+        <input type="submit" value="Subscribe">
+    </form>
+
+</body>
+</html>
