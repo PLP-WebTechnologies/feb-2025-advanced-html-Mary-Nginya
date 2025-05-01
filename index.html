@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <!-- Top 5 Dream Destinations -->
+    <!-- Using ordered list -->
     <h2>Top 5 Places I Want to Visit</h2>
     <ol type="I">
         <li>Australia</li>
@@ -23,64 +23,79 @@
      <!-- I still don't like my gallery. It need more pictures that are organised and correct size. Will look into it later. -->
     <!-- Table: Travel Plans with Pseudonyms -->
     <h2>My Travel Plans</h2>
-    <table border="1" cellpadding="5" cellspacing="0"> 
+    <table bgcolor="lightgrey" border="1" cellpadding="5" cellspacing="0" width="300">
+
         <thead>
-            <tr>
-                <th>Pseudonym</th>
+            <tr bgcolor="grey">
+                <th>Pseudonym(aka)</th>
                 <th>Location</th>
-                <th>Planned Date</th>
+                <th width ="300"> Planned Date</th>  
+    <!-- I tried making the planned date cell longer and it is not working out. So I moved to months. Later learnt it is because I was not making the change on the table tag. Interesting how you mutiply with the number of cells. -->
                 <th>Mobile</th>
                 <th>Email</th>
             </tr>
         </thead>
         <tbody>
-            <tr><td>Meera</td><td>Australia</td><td>2025-12-10</td><td>0711111111</td><td>Meera@travelmail.com</td></tr>
-            <tr><td>Tracie</td><td>Singapore</td><td>2026-02-05</td><td>0722222222</td><td>tracir@tripmail.com</td></tr>
-            <tr><td>Penelope</td><td>Japan</td><td>2026-04-20</td><td>0733333333</td><td>penelope@wander.com</td></tr>
-            <tr><td>Bloom</td><td>Greece</td><td>2026-07-15</td><td>0744444444</td><td>bloom@journey.org</td></tr>
-            <tr><td>Chobi</td><td>Morocco</td><td>2026-09-30</td><td>0755555555</td><td>chobi@globe.net</td></tr>
+            <tr><td>Meera</td><td>Australia</td><td>April!</td><td>071453737289</td><td>Meera@gmail.com</td></tr>
+            <tr><td>Tracie</td><td>Singapore</td><td>June</td><td>0722664839<td>tracie@gmail.com</td></tr>
+            <tr><td>Penelope</td><td>Japan</td><td>August</td><td>07337492290</td><td>penelope@gmail.com</td></tr>
+            <tr><td>Bloom</td><td>Greece</td><td>September</td><td>072304790277</td><td>bloom@gmail.com</td></tr>
+            <tr><td>Chobi</td><td>Morocco</td><td>December</td><td>0777390284</td><td>chobi@gmail.com</td></tr>
         </tbody>
     </table>
 
     <!-- Registration Form -->
     <h2>Subscribe to My Travel Diary</h2>
+    <!-- More reading on the method post and get content. For now I will use the suggested one because it works for me. -->
     <form action="#" method="post">
         <!-- Name -->
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+         <!-- I want to see the difference if I use div but I forgot. Next on learn that! yes-->
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    
+        <br>
+        <br>
 
         <!-- Email -->
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required><br><br>
+        <input type="email" id="email" name="email" placeholder="you@gmail.com" required>
+        <br><br>
 
         <!-- Password -->
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required minlength="6"><br><br>
+        <input type="password" id="password" name="password" required minlength="8">
+        <br><br>
 
         <!-- Date -->
         <label for="dob">Date of Birth:</label>
         <input type="date" id="dob" name="dob" required><br><br>
 
-        <!-- Gender -->
-        <p>Gender:</p>
-        <label><input type="radio" name="gender" value="female" required> Female</label>
-        <label><input type="radio" name="gender" value="male"> Male</label><br><br>
+        <!-- Gender. I want one to just select one(use radio button) so move them into a group by having them have the same name.-->
+        
+        <label for="Title"> Gender:</label>
 
-        <!-- Hobbies -->
+        <label for="Female">Female</label>
+        <input type="radio" id="Female" name="gender" value="female"> 
+        <label for="Male"> Male</label>
+        <input type="radio" id="Male" name="gender" value="male"> 
+        <label for="Prefer not to say"> Prefer not to say</label>
+        <input type="radio" id="Prefer not to say" name="gender" value="other"><br>
+         <br> 
+        <!-- I added another line break to separate with the next section on interest. Different from basic info. . -->
         <p>What are your travel interests?</p>
         <label><input type="checkbox" name="interest" value="adventure"> Adventure</label>
         <label><input type="checkbox" name="interest" value="culture"> Culture</label>
-        <label><input type="checkbox" name="interest" value="nature"> Nature</label><br><br>
+        <label><input type="checkbox" name="interest" value="nature"> Nature</label><br>
 
-        <!-- Country Dropdown -->
-        <label for="country">Where are you from?</label>
-        <select id="country" name="country" required>
-            <option value="">--Select--</option>
-            <option value="kenya">Kenya</option>
-            <option value="rwanda">Rwanda</option>
-            <option value="nigeria">Nigeria</option>
-        </select><br><br>
-
+        <!-- Payment details. Here I will use a dropdown menu which uses select tag pair not the type.  -->
+        <label for="payment">Payment Method:</label>
+        <select id="payment" name="payment" required> 
+            <option value="Cash"> Cash</option>
+            <option value ="Mpesa">Mpesa</option>
+            <option value="Bank Transfer">Bank Transfer</option>
+            <option value="Paypal">Paypal</option>
+        </select> 
+        <br><br>
         <input type="submit" value="Subscribe">
     </form>
 
